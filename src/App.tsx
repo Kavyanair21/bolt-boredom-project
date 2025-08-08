@@ -93,8 +93,29 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-8">
+    <div className="relative min-h-screen text-white overflow-hidden" style={{background: 'linear-gradient(135deg, #222 0px, #333 100%)'}}>
+      {/* Wavy SVG Shape Top */}
+      <svg className="absolute top-0 left-0 w-full h-32 opacity-40 pointer-events-none" viewBox="0 0 1440 320" fill="none">
+        <path fill="#6EE7B7" fillOpacity="0.5" d="M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,122.7C672,107,768,85,864,101.3C960,117,1056,171,1152,186.7C1248,203,1344,181,1392,170.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" />
+      </svg>
+      {/* Wavy SVG Shape Bottom */}
+      <svg className="absolute bottom-0 right-0 w-full h-32 opacity-40 pointer-events-none" viewBox="0 0 1440 320" fill="none">
+        <path fill="#FBBF24" fillOpacity="0.5" d="M0,224L48,213.3C96,203,192,181,288,154.7C384,128,480,96,576,117.3C672,139,768,213,864,229.3C960,245,1056,203,1152,186.7C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+      </svg>
+      {/* Emoji Overlay Pattern */}
+      <svg className="absolute inset-0 w-full h-full opacity-15 pointer-events-none" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <defs>
+          <pattern id="emojis" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+            <text x="0" y="20" fontSize="20">😴</text>
+            <text x="15" y="10" fontSize="20">🦥</text>
+            <text x="10" y="28" fontSize="20">💀</text>
+          </pattern>
+        </defs>
+        <rect width="100" height="100" fill="url(#emojis)" />
+      </svg>
+      {/* Radial Gradient Overlay */}
+      <div className="absolute inset-0 pointer-events-none" style={{background: 'radial-gradient(circle at 60% 40%, rgba(255,255,255,0.08) 0%, transparent 70%)'}} />
+  <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
@@ -191,7 +212,7 @@ function App() {
                       </h3>
                       <button
                         onClick={analyzeImage}
-                        className="group px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                        className="group px-8 py-4 bg-gradient-to-r from-black to-blue-500 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                       >
                         <div className="flex items-center space-x-2">
                           <Zap className="w-6 h-6 group-hover:animate-spin" />
