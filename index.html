@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How Bored Are You in Class? - A fun, sarcastic web app that analyzes your boredom level through facial expressions!" />
+    <title>How Bored Are You in Class? 😴</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+      
+      * {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      }
+      
+      body {
+        margin: 0;
+        background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #3730a3 100%);
+        min-height: 100vh;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgba(168, 85, 247, 0.8);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(168, 85, 247, 1);
+      }
+
+      /* Custom animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+
+      .float-animation {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      /* Loading animation */
+      @keyframes pulse-glow {
+        0%, 100% {
+          box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 40px rgba(168, 85, 247, 0.8);
+        }
+      }
+
+      .pulse-glow {
+        animation: pulse-glow 2s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
