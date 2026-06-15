@@ -90,7 +90,10 @@ src/
 
 ---
 
-
-Interested in Full Stack Development, Artificial Intelligence, and Machine Learning.
+ My Contribution:
+ 
+• Conducted research on AI-based facial expression analysis techniques.
+• Assisted in feature planning, testing, and project documentation.
+• Supported the development team by evaluating suitable technologies and implementation approaches.
 
 ---
