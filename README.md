@@ -39,9 +39,9 @@ The project demonstrates the integration of Artificial Intelligence, Computer Vi
 
 ---
 
-## 📸 Screenshot
+## 📸 Application Screenshot
 
-![Application Screenshot](screenshot.png)
+![How Bored Are You In Class](screenshots/homepage.png)
 
 ---
 
