@@ -90,7 +90,7 @@ src/
 
 ---
 
- My Contribution:
+## My Contribution:
  
 • Conducted research on AI-based facial expression analysis techniques.
 • Assisted in feature planning, testing, and project documentation.
